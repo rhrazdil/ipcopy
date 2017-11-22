@@ -1,0 +1,25 @@
+{
+  
+    "manifest_version": 2,
+    "name": "IPCopy",
+    "version": "1.0",
+  
+    "description": "Copies IP address of selected vm/host to clipboard.",
+    "icons": {
+      "48": "icons/ipcopy.png"
+    },
+  
+    "applications": {
+      "gecko": {
+        "id": "ipcopy@mozilla.org"
+      }
+    },
+
+    "content_scripts": [
+      {
+        "matches": ["https://*/ovirt-engine/webadmin/*"],
+        "js": ["ipcopy.js"]
+      }
+    ]
+  
+  }
